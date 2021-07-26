@@ -1,0 +1,5 @@
+<launch>
+    <node name="action_shutdown_node" pkg="digit_jsonapi" type="action_shutdown.py" output="screen">
+        <param name="exp_mode" value="$(arg exp_mode)" />
+    </node>
+</launch>

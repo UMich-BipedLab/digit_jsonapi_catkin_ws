@@ -1,0 +1,2506 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agilty Robotics Python SDK &#8212; Agility Robotics Python SDK  documentation</title>
+<style>
+/*
+ * basic.css
+ * ~~~~~~~~~
+ *
+ * Sphinx stylesheet -- basic theme.
+ *
+ * :copyright: Copyright 2007-2021 by the Sphinx team, see AUTHORS.
+ * :license: BSD, see LICENSE for details.
+ *
+ */
+
+/* -- main layout ----------------------------------------------------------- */
+
+div.clearer {
+    clear: both;
+}
+
+div.section::after {
+    display: block;
+    content: '';
+    clear: left;
+}
+
+/* -- relbar ---------------------------------------------------------------- */
+
+div.related {
+    width: 100%;
+    font-size: 90%;
+}
+
+div.related h3 {
+    display: none;
+}
+
+div.related ul {
+    margin: 0;
+    padding: 0 0 0 10px;
+    list-style: none;
+}
+
+div.related li {
+    display: inline;
+}
+
+div.related li.right {
+    float: right;
+    margin-right: 5px;
+}
+
+/* -- sidebar --------------------------------------------------------------- */
+
+div.sphinxsidebarwrapper {
+    padding: 10px 5px 0 10px;
+}
+
+div.sphinxsidebar {
+    float: left;
+    width: 230px;
+    margin-left: -100%;
+    font-size: 90%;
+    word-wrap: break-word;
+    overflow-wrap : break-word;
+}
+
+div.sphinxsidebar ul {
+    list-style: none;
+}
+
+div.sphinxsidebar ul ul,
+div.sphinxsidebar ul.want-points {
+    margin-left: 20px;
+    list-style: square;
+}
+
+div.sphinxsidebar ul ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+div.sphinxsidebar form {
+    margin-top: 10px;
+}
+
+div.sphinxsidebar input {
+    border: 1px solid #98dbcc;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+div.sphinxsidebar #searchbox form.search {
+    overflow: hidden;
+}
+
+div.sphinxsidebar #searchbox input[type="text"] {
+    float: left;
+    width: 80%;
+    padding: 0.25em;
+    box-sizing: border-box;
+}
+
+div.sphinxsidebar #searchbox input[type="submit"] {
+    float: left;
+    width: 20%;
+    border-left: none;
+    padding: 0.25em;
+    box-sizing: border-box;
+}
+
+
+img {
+    border: 0;
+    max-width: 100%;
+}
+
+/* -- search page ----------------------------------------------------------- */
+
+ul.search {
+    margin: 10px 0 0 20px;
+    padding: 0;
+}
+
+ul.search li {
+    padding: 5px 0 5px 20px;
+    background-image: url(file.png);
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+}
+
+ul.search li a {
+    font-weight: bold;
+}
+
+ul.search li p.context {
+    color: #888;
+    margin: 2px 0 0 30px;
+    text-align: left;
+}
+
+ul.keywordmatches li.goodmatch a {
+    font-weight: bold;
+}
+
+/* -- index page ------------------------------------------------------------ */
+
+table.contentstable {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.contentstable p.biglink {
+    line-height: 150%;
+}
+
+a.biglink {
+    font-size: 1.3em;
+}
+
+span.linkdescr {
+    font-style: italic;
+    padding-top: 5px;
+    font-size: 90%;
+}
+
+/* -- general index --------------------------------------------------------- */
+
+table.indextable {
+    width: 100%;
+}
+
+table.indextable td {
+    text-align: left;
+    vertical-align: top;
+}
+
+table.indextable ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+table.indextable > tbody > tr > td > ul {
+    padding-left: 0em;
+}
+
+table.indextable tr.pcap {
+    height: 10px;
+}
+
+table.indextable tr.cap {
+    margin-top: 10px;
+    background-color: #f2f2f2;
+}
+
+img.toggler {
+    margin-right: 3px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+div.modindex-jumpbox {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 1em 0 1em 0;
+    padding: 0.4em;
+}
+
+div.genindex-jumpbox {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 1em 0 1em 0;
+    padding: 0.4em;
+}
+
+/* -- domain module index --------------------------------------------------- */
+
+table.modindextable td {
+    padding: 2px;
+    border-collapse: collapse;
+}
+
+/* -- general body styles --------------------------------------------------- */
+
+div.body {
+    min-width: 450px;
+    max-width: 800px;
+}
+
+div.body p, div.body dd, div.body li, div.body blockquote {
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+a.headerlink {
+    visibility: hidden;
+}
+
+a.brackets:before,
+span.brackets > a:before{
+    content: "[";
+}
+
+a.brackets:after,
+span.brackets > a:after {
+    content: "]";
+}
+
+h1:hover > a.headerlink,
+h2:hover > a.headerlink,
+h3:hover > a.headerlink,
+h4:hover > a.headerlink,
+h5:hover > a.headerlink,
+h6:hover > a.headerlink,
+dt:hover > a.headerlink,
+caption:hover > a.headerlink,
+p.caption:hover > a.headerlink,
+div.code-block-caption:hover > a.headerlink {
+    visibility: visible;
+}
+
+div.body p.caption {
+    text-align: inherit;
+}
+
+div.body td {
+    text-align: left;
+}
+
+.first {
+    margin-top: 0 !important;
+}
+
+p.rubric {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+img.align-left, figure.align-left, .figure.align-left, object.align-left {
+    clear: left;
+    float: left;
+    margin-right: 1em;
+}
+
+img.align-right, figure.align-right, .figure.align-right, object.align-right {
+    clear: right;
+    float: right;
+    margin-left: 1em;
+}
+
+img.align-center, figure.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.align-default, figure.align-default, .figure.align-default {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-default {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* -- sidebars -------------------------------------------------------------- */
+
+div.sidebar,
+aside.sidebar {
+    margin: 0 0 0.5em 1em;
+    border: 1px solid #ddb;
+    padding: 7px;
+    background-color: #ffe;
+    width: 40%;
+    float: right;
+    clear: right;
+    overflow-x: auto;
+}
+
+p.sidebar-title {
+    font-weight: bold;
+}
+
+div.admonition, div.topic, blockquote {
+    clear: left;
+}
+
+/* -- topics ---------------------------------------------------------------- */
+
+div.topic {
+    border: 1px solid #ccc;
+    padding: 7px;
+    margin: 10px 0 10px 0;
+}
+
+p.topic-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* -- admonitions ----------------------------------------------------------- */
+
+div.admonition {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+div.admonition dt {
+    font-weight: bold;
+}
+
+p.admonition-title {
+    margin: 0px 10px 5px 0px;
+    font-weight: bold;
+}
+
+div.body p.centered {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* -- content of sidebars/topics/admonitions -------------------------------- */
+
+div.sidebar > :last-child,
+aside.sidebar > :last-child,
+div.topic > :last-child,
+div.admonition > :last-child {
+    margin-bottom: 0;
+}
+
+div.sidebar::after,
+aside.sidebar::after,
+div.topic::after,
+div.admonition::after,
+blockquote::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+/* -- tables ---------------------------------------------------------------- */
+
+table.docutils {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-collapse: collapse;
+}
+
+table.align-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.align-default {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table caption span.caption-number {
+    font-style: italic;
+}
+
+table caption span.caption-text {
+}
+
+table.docutils td, table.docutils th {
+    padding: 1px 8px 1px 5px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #aaa;
+}
+
+table.footnote td, table.footnote th {
+    border: 0 !important;
+}
+
+th {
+    text-align: left;
+    padding-right: 5px;
+}
+
+table.citation {
+    border-left: solid 1px gray;
+    margin-left: 1px;
+}
+
+table.citation td {
+    border-bottom: none;
+}
+
+th > :first-child,
+td > :first-child {
+    margin-top: 0px;
+}
+
+th > :last-child,
+td > :last-child {
+    margin-bottom: 0px;
+}
+
+/* -- figures --------------------------------------------------------------- */
+
+div.figure, figure {
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+div.figure p.caption, figcaption {
+    padding: 0.3em;
+}
+
+div.figure p.caption span.caption-number,
+figcaption span.caption-number {
+    font-style: italic;
+}
+
+div.figure p.caption span.caption-text,
+figcaption span.caption-text {
+}
+
+/* -- field list styles ----------------------------------------------------- */
+
+table.field-list td, table.field-list th {
+    border: 0 !important;
+}
+
+.field-list ul {
+    margin: 0;
+    padding-left: 1em;
+}
+
+.field-list p {
+    margin: 0;
+}
+
+.field-name {
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+}
+
+/* -- hlist styles ---------------------------------------------------------- */
+
+table.hlist {
+    margin: 1em 0;
+}
+
+table.hlist td {
+    vertical-align: top;
+}
+
+/* -- object description styles --------------------------------------------- */
+
+.sig {
+	font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+
+.sig-name, code.descname {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.sig-name {
+	font-size: 1.1em;
+}
+
+code.descname {
+    font-size: 1.2em;
+}
+
+.sig-prename, code.descclassname {
+    background-color: transparent;
+}
+
+.optional {
+    font-size: 1.3em;
+}
+
+.sig-paren {
+    font-size: larger;
+}
+
+.sig-param.n {
+	font-style: italic;
+}
+
+/* C++ specific styling */
+
+.sig-inline.c-texpr,
+.sig-inline.cpp-texpr {
+	font-family: unset;
+}
+
+.sig.c   .k, .sig.c   .kt,
+.sig.cpp .k, .sig.cpp .kt {
+	color: #0033B3;
+}
+
+.sig.c   .m,
+.sig.cpp .m {
+	color: #1750EB;
+}
+
+.sig.c   .s, .sig.c   .sc,
+.sig.cpp .s, .sig.cpp .sc {
+	color: #067D17;
+}
+
+
+/* -- other body styles ----------------------------------------------------- */
+
+ol.arabic {
+    list-style: decimal;
+}
+
+ol.loweralpha {
+    list-style: lower-alpha;
+}
+
+ol.upperalpha {
+    list-style: upper-alpha;
+}
+
+ol.lowerroman {
+    list-style: lower-roman;
+}
+
+ol.upperroman {
+    list-style: upper-roman;
+}
+
+:not(li) > ol > li:first-child > :first-child,
+:not(li) > ul > li:first-child > :first-child {
+    margin-top: 0px;
+}
+
+:not(li) > ol > li:last-child > :last-child,
+:not(li) > ul > li:last-child > :last-child {
+    margin-bottom: 0px;
+}
+
+ol.simple ol p,
+ol.simple ul p,
+ul.simple ol p,
+ul.simple ul p {
+    margin-top: 0;
+}
+
+ol.simple > li:not(:first-child) > p,
+ul.simple > li:not(:first-child) > p {
+    margin-top: 0;
+}
+
+ol.simple p,
+ul.simple p {
+    margin-bottom: 0;
+}
+
+dl.footnote > dt,
+dl.citation > dt {
+    float: left;
+    margin-right: 0.5em;
+}
+
+dl.footnote > dd,
+dl.citation > dd {
+    margin-bottom: 0em;
+}
+
+dl.footnote > dd:after,
+dl.citation > dd:after {
+    content: "";
+    clear: both;
+}
+
+dl.field-list {
+    display: grid;
+    grid-template-columns: fit-content(30%) auto;
+}
+
+dl.field-list > dt {
+    font-weight: bold;
+    word-break: break-word;
+    padding-left: 0.5em;
+    padding-right: 5px;
+}
+
+dl.field-list > dt:after {
+    content: ":";
+}
+
+dl.field-list > dd {
+    padding-left: 0.5em;
+    margin-top: 0em;
+    margin-left: 0em;
+    margin-bottom: 0em;
+}
+
+dl {
+    margin-bottom: 15px;
+}
+
+dd > :first-child {
+    margin-top: 0px;
+}
+
+dd ul, dd table {
+    margin-bottom: 10px;
+}
+
+dd {
+    margin-top: 3px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+dl > dd:last-child,
+dl > dd:last-child > :last-child {
+    margin-bottom: 0;
+}
+
+dt:target, span.highlighted {
+    background-color: #fbe54e;
+}
+
+rect.highlighted {
+    fill: #fbe54e;
+}
+
+dl.glossary dt {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.versionmodified {
+    font-style: italic;
+}
+
+.system-message {
+    background-color: #fda;
+    padding: 5px;
+    border: 3px solid red;
+}
+
+.footnote:target  {
+    background-color: #ffa;
+}
+
+.line-block {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.line-block .line-block {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1.5em;
+}
+
+.guilabel, .menuselection {
+    font-family: sans-serif;
+}
+
+.accelerator {
+    text-decoration: underline;
+}
+
+.classifier {
+    font-style: oblique;
+}
+
+.classifier:before {
+    font-style: normal;
+    margin: 0.5em;
+    content: ":";
+}
+
+abbr, acronym {
+    border-bottom: dotted 1px;
+    cursor: help;
+}
+
+/* -- code displays --------------------------------------------------------- */
+
+pre {
+    overflow: auto;
+    overflow-y: hidden;  /* fixes display issues on Chrome browsers */
+}
+
+pre, div[class*="highlight-"] {
+    clear: both;
+}
+
+span.pre {
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+}
+
+div[class*="highlight-"] {
+    margin: 1em 0;
+}
+
+td.linenos pre {
+    border: 0;
+    background-color: transparent;
+    color: #aaa;
+}
+
+table.highlighttable {
+    display: block;
+}
+
+table.highlighttable tbody {
+    display: block;
+}
+
+table.highlighttable tr {
+    display: flex;
+}
+
+table.highlighttable td {
+    margin: 0;
+    padding: 0;
+}
+
+table.highlighttable td.linenos {
+    padding-right: 0.5em;
+}
+
+table.highlighttable td.code {
+    flex: 1;
+    overflow: hidden;
+}
+
+.highlight .hll {
+    display: block;
+}
+
+div.highlight pre,
+table.highlighttable pre {
+    margin: 0;
+}
+
+div.code-block-caption + div {
+    margin-top: 0;
+}
+
+div.code-block-caption {
+    margin-top: 1em;
+    padding: 2px 5px;
+    font-size: small;
+}
+
+div.code-block-caption code {
+    background-color: transparent;
+}
+
+table.highlighttable td.linenos,
+span.linenos,
+div.doctest > div.highlight span.gp {  /* gp: Generic.Prompt */
+  user-select: none;
+  -webkit-user-select: text; /* Safari fallback only */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+div.code-block-caption span.caption-number {
+    padding: 0.1em 0.3em;
+    font-style: italic;
+}
+
+div.code-block-caption span.caption-text {
+}
+
+div.literal-block-wrapper {
+    margin: 1em 0;
+}
+
+code.xref, a code {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+    background-color: transparent;
+}
+
+.viewcode-link {
+    float: right;
+}
+
+.viewcode-back {
+    float: right;
+    font-family: sans-serif;
+}
+
+div.viewcode-block:target {
+    margin: -1px -10px;
+    padding: 0 10px;
+}
+
+/* -- math display ---------------------------------------------------------- */
+
+img.math {
+    vertical-align: middle;
+}
+
+div.body div.math p {
+    text-align: center;
+}
+
+span.eqno {
+    float: right;
+}
+
+span.eqno a.headerlink {
+    position: absolute;
+    z-index: 1;
+}
+
+div.math:hover a.headerlink {
+    visibility: visible;
+}
+
+/* -- printout stylesheet --------------------------------------------------- */
+
+@media print {
+    div.document,
+    div.documentwrapper,
+    div.bodywrapper {
+        margin: 0 !important;
+        width: 100%;
+    }
+
+    div.sphinxsidebar,
+    div.related,
+    div.footer,
+    #top-link {
+        display: none;
+    }
+}</style>
+<style>
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
+.highlight .c { color: #8f5902; font-style: italic } /* Comment */
+.highlight .err { color: #a40000; border: 1px solid #ef2929 } /* Error */
+.highlight .g { color: #000000 } /* Generic */
+.highlight .k { color: #004461; font-weight: bold } /* Keyword */
+.highlight .l { color: #000000 } /* Literal */
+.highlight .n { color: #000000 } /* Name */
+.highlight .o { color: #582800 } /* Operator */
+.highlight .x { color: #000000 } /* Other */
+.highlight .p { color: #000000; font-weight: bold } /* Punctuation */
+.highlight .ch { color: #8f5902; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #8f5902; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #8f5902 } /* Comment.Preproc */
+.highlight .cpf { color: #8f5902; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #8f5902; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #8f5902; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #a40000 } /* Generic.Deleted */
+.highlight .ge { color: #000000; font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #ef2929 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #745334 } /* Generic.Prompt */
+.highlight .gs { color: #000000; font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #a40000; font-weight: bold } /* Generic.Traceback */
+.highlight .kc { color: #004461; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #004461; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #004461; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #004461; font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { color: #004461; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #004461; font-weight: bold } /* Keyword.Type */
+.highlight .ld { color: #000000 } /* Literal.Date */
+.highlight .m { color: #990000 } /* Literal.Number */
+.highlight .s { color: #4e9a06 } /* Literal.String */
+.highlight .na { color: #c4a000 } /* Name.Attribute */
+.highlight .nb { color: #004461 } /* Name.Builtin */
+.highlight .nc { color: #000000 } /* Name.Class */
+.highlight .no { color: #000000 } /* Name.Constant */
+.highlight .nd { color: #888888 } /* Name.Decorator */
+.highlight .ni { color: #ce5c00 } /* Name.Entity */
+.highlight .ne { color: #cc0000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #000000 } /* Name.Function */
+.highlight .nl { color: #f57900 } /* Name.Label */
+.highlight .nn { color: #000000 } /* Name.Namespace */
+.highlight .nx { color: #000000 } /* Name.Other */
+.highlight .py { color: #000000 } /* Name.Property */
+.highlight .nt { color: #004461; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #000000 } /* Name.Variable */
+.highlight .ow { color: #004461; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #f8f8f8; text-decoration: underline } /* Text.Whitespace */
+.highlight .mb { color: #990000 } /* Literal.Number.Bin */
+.highlight .mf { color: #990000 } /* Literal.Number.Float */
+.highlight .mh { color: #990000 } /* Literal.Number.Hex */
+.highlight .mi { color: #990000 } /* Literal.Number.Integer */
+.highlight .mo { color: #990000 } /* Literal.Number.Oct */
+.highlight .sa { color: #4e9a06 } /* Literal.String.Affix */
+.highlight .sb { color: #4e9a06 } /* Literal.String.Backtick */
+.highlight .sc { color: #4e9a06 } /* Literal.String.Char */
+.highlight .dl { color: #4e9a06 } /* Literal.String.Delimiter */
+.highlight .sd { color: #8f5902; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4e9a06 } /* Literal.String.Double */
+.highlight .se { color: #4e9a06 } /* Literal.String.Escape */
+.highlight .sh { color: #4e9a06 } /* Literal.String.Heredoc */
+.highlight .si { color: #4e9a06 } /* Literal.String.Interpol */
+.highlight .sx { color: #4e9a06 } /* Literal.String.Other */
+.highlight .sr { color: #4e9a06 } /* Literal.String.Regex */
+.highlight .s1 { color: #4e9a06 } /* Literal.String.Single */
+.highlight .ss { color: #4e9a06 } /* Literal.String.Symbol */
+.highlight .bp { color: #3465a4 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #000000 } /* Name.Function.Magic */
+.highlight .vc { color: #000000 } /* Name.Variable.Class */
+.highlight .vg { color: #000000 } /* Name.Variable.Global */
+.highlight .vi { color: #000000 } /* Name.Variable.Instance */
+.highlight .vm { color: #000000 } /* Name.Variable.Magic */
+.highlight .il { color: #990000 } /* Literal.Number.Integer.Long */</style>
+<style>
+@import url("basic.css");
+
+/* -- page layout ----------------------------------------------------------- */
+
+body {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+
+div.document {
+    width: 940px;
+    margin: 30px auto 0 auto;
+}
+
+div.documentwrapper {
+    float: left;
+    width: 100%;
+}
+
+div.bodywrapper {
+    margin: 0 0 0 220px;
+}
+
+div.sphinxsidebar {
+    width: 220px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+hr {
+    border: 1px solid #B1B4B6;
+}
+
+div.body {
+    background-color: #fff;
+    color: #3E4349;
+    padding: 0 30px 0 30px;
+}
+
+div.body > .section {
+    text-align: left;
+}
+
+div.footer {
+    width: 940px;
+    margin: 20px auto 30px auto;
+    font-size: 14px;
+    color: #888;
+    text-align: right;
+}
+
+div.footer a {
+    color: #888;
+}
+
+p.caption {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+div.relations {
+    display: none;
+}
+
+
+div.sphinxsidebar a {
+    color: #444;
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+}
+
+div.sphinxsidebar a:hover {
+    border-bottom: 1px solid #999;
+}
+
+div.sphinxsidebarwrapper {
+    padding: 18px 10px;
+}
+
+div.sphinxsidebarwrapper p.logo {
+    padding: 0;
+    margin: -10px 0 0 0px;
+    text-align: center;
+}
+
+div.sphinxsidebarwrapper h1.logo {
+    margin-top: -10px;
+    text-align: center;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+div.sphinxsidebarwrapper h1.logo-name {
+    margin-top: 0px;
+}
+
+div.sphinxsidebarwrapper p.blurb {
+    margin-top: 0;
+    font-style: normal;
+}
+
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
+    font-family: Georgia, serif;
+    color: #444;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+div.sphinxsidebar h4 {
+    font-size: 20px;
+}
+
+div.sphinxsidebar h3 a {
+    color: #444;
+}
+
+div.sphinxsidebar p.logo a,
+div.sphinxsidebar h3 a,
+div.sphinxsidebar p.logo a:hover,
+div.sphinxsidebar h3 a:hover {
+    border: none;
+}
+
+div.sphinxsidebar p {
+    color: #555;
+    margin: 10px 0;
+}
+
+div.sphinxsidebar ul {
+    margin: 10px 0;
+    padding: 0;
+    color: #000;
+}
+
+div.sphinxsidebar ul li.toctree-l1 > a {
+    font-size: 120%;
+}
+
+div.sphinxsidebar ul li.toctree-l2 > a {
+    font-size: 110%;
+}
+
+div.sphinxsidebar input {
+    border: 1px solid #CCC;
+    font-family: Georgia, serif;
+    font-size: 1em;
+}
+
+div.sphinxsidebar hr {
+    border: none;
+    height: 1px;
+    color: #AAA;
+    background: #AAA;
+
+    text-align: left;
+    margin-left: 0;
+    width: 50%;
+}
+
+div.sphinxsidebar .badge {
+    border-bottom: none;
+}
+
+div.sphinxsidebar .badge:hover {
+    border-bottom: none;
+}
+
+/* To address an issue with donation coming after search */
+div.sphinxsidebar h3.donation {
+    margin-top: 10px;
+}
+
+/* -- body styles ----------------------------------------------------------- */
+
+a {
+    color: #004B6B;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #6D4100;
+    text-decoration: underline;
+}
+
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    margin: 30px 0px 10px 0px;
+    padding: 0;
+}
+
+div.body h1 { margin-top: 0; padding-top: 0; font-size: 240%; }
+div.body h2 { font-size: 180%; }
+div.body h3 { font-size: 150%; }
+div.body h4 { font-size: 130%; }
+div.body h5 { font-size: 100%; }
+div.body h6 { font-size: 100%; }
+
+a.headerlink {
+    color: #DDD;
+    padding: 0 4px;
+    text-decoration: none;
+}
+
+a.headerlink:hover {
+    color: #444;
+    background: #EAEAEA;
+}
+
+div.body p, div.body dd, div.body li {
+    line-height: 1.4em;
+}
+
+div.admonition {
+    margin: 20px 0px;
+    padding: 10px 30px;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+}
+
+div.admonition tt.xref, div.admonition code.xref, div.admonition a tt {
+    background-color: #FBFBFB;
+    border-bottom: 1px solid #fafafa;
+}
+
+div.admonition p.admonition-title {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    line-height: 1;
+}
+
+div.admonition p.last {
+    margin-bottom: 0;
+}
+
+div.highlight {
+    background-color: #fff;
+}
+
+dt:target, .highlight {
+    background: #FAF3E8;
+}
+
+div.warning {
+    background-color: #FCC;
+    border: 1px solid #FAA;
+}
+
+div.danger {
+    background-color: #FCC;
+    border: 1px solid #FAA;
+    -moz-box-shadow: 2px 2px 4px #D52C2C;
+    -webkit-box-shadow: 2px 2px 4px #D52C2C;
+    box-shadow: 2px 2px 4px #D52C2C;
+}
+
+div.error {
+    background-color: #FCC;
+    border: 1px solid #FAA;
+    -moz-box-shadow: 2px 2px 4px #D52C2C;
+    -webkit-box-shadow: 2px 2px 4px #D52C2C;
+    box-shadow: 2px 2px 4px #D52C2C;
+}
+
+div.caution {
+    background-color: #FCC;
+    border: 1px solid #FAA;
+}
+
+div.attention {
+    background-color: #FCC;
+    border: 1px solid #FAA;
+}
+
+div.important {
+    background-color: #EEE;
+    border: 1px solid #CCC;
+}
+
+div.note {
+    background-color: #EEE;
+    border: 1px solid #CCC;
+}
+
+div.tip {
+    background-color: #EEE;
+    border: 1px solid #CCC;
+}
+
+div.hint {
+    background-color: #EEE;
+    border: 1px solid #CCC;
+}
+
+div.seealso {
+    background-color: #EEE;
+    border: 1px solid #CCC;
+}
+
+div.topic {
+    background-color: #EEE;
+}
+
+p.admonition-title {
+    display: inline;
+}
+
+p.admonition-title:after {
+    content: ":";
+}
+
+pre, tt, code {
+    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 0.9em;
+}
+
+.hll {
+    background-color: #FFC;
+    margin: 0 -12px;
+    padding: 0 12px;
+    display: block;
+}
+
+img.screenshot {
+}
+
+tt.descname, tt.descclassname, code.descname, code.descclassname {
+    font-size: 0.95em;
+}
+
+tt.descname, code.descname {
+    padding-right: 0.08em;
+}
+
+img.screenshot {
+    -moz-box-shadow: 2px 2px 4px #EEE;
+    -webkit-box-shadow: 2px 2px 4px #EEE;
+    box-shadow: 2px 2px 4px #EEE;
+}
+
+table.docutils {
+    border: 1px solid #888;
+    -moz-box-shadow: 2px 2px 4px #EEE;
+    -webkit-box-shadow: 2px 2px 4px #EEE;
+    box-shadow: 2px 2px 4px #EEE;
+}
+
+table.docutils td, table.docutils th {
+    border: 1px solid #888;
+    padding: 0.25em 0.7em;
+}
+
+table.field-list, table.footnote {
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+table.footnote {
+    margin: 15px 0;
+    width: 100%;
+    border: 1px solid #EEE;
+    background: #FDFDFD;
+    font-size: 0.9em;
+}
+
+table.footnote + table.footnote {
+    margin-top: -15px;
+    border-top: none;
+}
+
+table.field-list th {
+    padding: 0 0.8em 0 0;
+}
+
+table.field-list td {
+    padding: 0;
+}
+
+table.field-list p {
+    margin-bottom: 0.8em;
+}
+
+/* Cloned from
+ * https://github.com/sphinx-doc/sphinx/commit/ef60dbfce09286b20b7385333d63a60321784e68
+ */
+.field-name {
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+}
+
+table.footnote td.label {
+    width: .1px;
+    padding: 0.3em 0 0.3em 0.5em;
+}
+
+table.footnote td {
+    padding: 0.3em 0.5em;
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+dl dd {
+    margin-left: 30px;
+}
+
+blockquote {
+    margin: 0 0 0 30px;
+    padding: 0;
+}
+
+ul, ol {
+    /* Matches the 30px from the narrow-screen "li > ul" selector below */
+    margin: 10px 0 10px 30px;
+    padding: 0;
+}
+
+pre {
+    background: #EEE;
+    padding: 7px 30px;
+    margin: 15px 0px;
+    line-height: 1.3em;
+}
+
+div.viewcode-block:target {
+    background: #ffd;
+}
+
+dl pre, blockquote pre, li pre {
+    margin-left: 0;
+    padding-left: 30px;
+}
+
+tt, code {
+    background-color: #ecf0f3;
+    color: #222;
+    /* padding: 1px 2px; */
+}
+
+tt.xref, code.xref, a tt {
+    background-color: #FBFBFB;
+    border-bottom: 1px solid #fff;
+}
+
+a.reference {
+    text-decoration: none;
+    border-bottom: 1px dotted #004B6B;
+}
+
+/* Don't put an underline on images */
+a.image-reference, a.image-reference:hover {
+    border-bottom: none;
+}
+
+a.reference:hover {
+    border-bottom: 1px solid #6D4100;
+}
+
+a.footnote-reference {
+    text-decoration: none;
+    font-size: 0.7em;
+    vertical-align: top;
+    border-bottom: 1px dotted #004B6B;
+}
+
+a.footnote-reference:hover {
+    border-bottom: 1px solid #6D4100;
+}
+
+a:hover tt, a:hover code {
+    background: #EEE;
+}
+
+
+@media screen and (max-width: 870px) {
+
+    div.sphinxsidebar {
+    	display: none;
+    }
+
+    div.document {
+       width: 100%;
+
+    }
+
+    div.documentwrapper {
+    	margin-left: 0;
+    	margin-top: 0;
+    	margin-right: 0;
+    	margin-bottom: 0;
+    }
+
+    div.bodywrapper {
+    	margin-top: 0;
+    	margin-right: 0;
+    	margin-bottom: 0;
+    	margin-left: 0;
+    }
+
+    ul {
+    	margin-left: 0;
+    }
+
+	li > ul {
+        /* Matches the 30px from the "ul, ol" selector above */
+		margin-left: 30px;
+	}
+
+    .document {
+    	width: auto;
+    }
+
+    .footer {
+    	width: auto;
+    }
+
+    .bodywrapper {
+    	margin: 0;
+    }
+
+    .footer {
+    	width: auto;
+    }
+
+    .github {
+        display: none;
+    }
+
+
+
+}
+
+
+
+@media screen and (max-width: 875px) {
+
+    body {
+        margin: 0;
+        padding: 20px 30px;
+    }
+
+    div.documentwrapper {
+        float: none;
+        background: #fff;
+    }
+
+    div.sphinxsidebar {
+        display: block;
+        float: none;
+        width: 102.5%;
+        margin: 50px -30px -20px -30px;
+        padding: 10px 20px;
+        background: #333;
+        color: #FFF;
+    }
+
+    div.sphinxsidebar h3, div.sphinxsidebar h4, div.sphinxsidebar p,
+    div.sphinxsidebar h3 a {
+        color: #fff;
+    }
+
+    div.sphinxsidebar a {
+        color: #AAA;
+    }
+
+    div.sphinxsidebar p.logo {
+        display: none;
+    }
+
+    div.document {
+        width: 100%;
+        margin: 0;
+    }
+
+    div.footer {
+        display: none;
+    }
+
+    div.bodywrapper {
+        margin: 0;
+    }
+
+    div.body {
+        min-height: 0;
+        padding: 0;
+    }
+
+    .rtd_doc_footer {
+        display: none;
+    }
+
+    .document {
+        width: auto;
+    }
+
+    .footer {
+        width: auto;
+    }
+
+    .footer {
+        width: auto;
+    }
+
+    .github {
+        display: none;
+    }
+}
+
+
+/* misc. */
+
+.revsys-inline {
+    display: none!important;
+}
+
+/* Make nested-list/multi-paragraph items look better in Releases changelog
+ * pages. Without this, docutils' magical list fuckery causes inconsistent
+ * formatting between different release sub-lists.
+ */
+div#changelog > div.section > ul > li > p:only-child {
+    margin-bottom: 0;
+}
+
+/* Hide fugly table cell borders in ..bibliography:: directive output */
+table.docutils.citation, table.docutils.citation td, table.docutils.citation th {
+  border: none;
+  /* Below needed in some edge cases; if not applied, bottom shadows appear */
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+
+/* relbar */
+
+.related {
+    line-height: 30px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.related.top {
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 20px;
+}
+
+.related.bottom {
+    border-top: 1px solid #EEE;
+}
+
+.related ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.related li {
+    display: inline;
+}
+
+nav#rellinks {
+    float: right;
+}
+
+nav#rellinks li+li:before {
+    content: "|";
+}
+
+nav#breadcrumbs li+li:before {
+    content: "\00BB";
+}
+
+/* Hide certain items when printing */
+@media print {
+    div.related {
+        display: none;
+    }
+}</style>
+   
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-agility">
+<span id="agilty-robotics-python-sdk"></span><h1>Agilty Robotics Python SDK<a class="headerlink" href="#module-agility" title="Permalink to this headline">¶</a></h1>
+<p>The Agility Robotics Python SDK is a collection of classes and functions
+that are meant to simplify the process of interacting with the JSON API
+provided by Agility Robotics robots.</p>
+<dl class="simple">
+<dt>Requirements:</dt><dd><ul class="simple">
+<li><p>Python 3.6+</p></li>
+<li><p>The websockets library</p></li>
+<li><p>Code written in an asynchronous style using asyncio</p></li>
+</ul>
+</dd>
+</dl>
+<p>The SDK is distributed as a prebuilt “wheel” package. It can be installed using
+pip.</p>
+<div class="section" id="module-agility.jsonapi">
+<span id="interacting-with-the-json-api"></span><h2>Interacting with the JSON API<a class="headerlink" href="#module-agility.jsonapi" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">JsonApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'127.0.0.1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">8080</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connect_timeout</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#agility.jsonapi.JsonApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>The main class used to manage sending and receiving JSON API messages.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">agility</span>
+<span class="kn">import</span> <span class="nn">agility.messages</span> <span class="k">as</span> <span class="nn">msgs</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># By default, connects to simulator on localhost port 8080</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">agility</span><span class="o">.</span><span class="n">JsonApi</span><span class="p">()</span> <span class="k">as</span> <span class="n">api</span><span class="p">:</span>
+        <span class="c1"># Send messages, launch other tasks</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">msgs</span><span class="o">.</span><span class="n">GetRobotInfo</span><span class="p">())</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Robot name: </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">robot_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="c1"># When the &#39;async with&#39; block exits, the connection shuts down</span>
+
+<span class="c1"># asyncio.run(main()) # Python 3.7+ only</span>
+<span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">main</span><span class="p">())</span> <span class="c1"># Python 3.6</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address</strong> – Defaults to ‘127.0.0.1’ for simulator use, set to ‘10.10.1.1’
+to connect to the physical robot.</p></li>
+<li><p><strong>port</strong> – Defaults to 8080, change this if the simulator is running on a
+different port (e.g. when running multiple simulations in parallel).</p></li>
+<li><p><strong>connect_timeout</strong> – Defaults to 1.0 seconds, this affects how long this
+class tries to connect to the robot before giving up. The default
+is generally appropriate for simulation, while on hardware setting
+this to a larger value or infinity is recommended.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.address">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">address</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#agility.jsonapi.JsonApi.address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the address that this object is connected to.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.port">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">port</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#agility.jsonapi.JsonApi.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the port number that this object is connected to.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.send">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#agility.jsonapi.JsonApi.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a message to the robot without waiting for any response.</p>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sends an action-stand message with no fields specified</span>
+<span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;action-stand&quot;</span><span class="p">)</span>
+
+<span class="c1"># Sends an action-stand message with an explicit base pose</span>
+<span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">send</span><span class="p">([</span><span class="s2">&quot;action-stand&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;base-pose&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;xyz&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]}}])</span>
+
+<span class="c1"># Same as above, but using the message creation helper classes</span>
+<span class="kn">import</span> <span class="nn">agility.messages</span> <span class="k">as</span> <span class="nn">msgs</span>
+<span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msgs</span><span class="o">.</span><span class="n">ActionStand</span><span class="p">(</span><span class="n">base_pose</span><span class="o">=</span><span class="n">msgs</span><span class="o">.</span><span class="n">Pose</span><span class="p">(</span><span class="n">xyz</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])))</span>
+</pre></div>
+</div>
+<p>This should be used to send messages that either do not produce a
+response or for which the response will be intentionally ignored.
+Automatically chooses a reference number to associate with the message.
+Any existing reference number in the input message is ignored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – Can be a <a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a>, a tuple or list that gets
+converted into a valid JSON message by json.dumps(), or just a
+message type name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The automatically selected reference number sent with the message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.monitor">
+<span class="sig-name descname"><span class="pre">monitor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#agility.monitors.MessageMonitor" title="agility.monitors.MessageMonitor"><span class="pre">agility.monitors.MessageMonitor</span></a><a class="headerlink" href="#agility.jsonapi.JsonApi.monitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows monitoring selected messages using an async for loop.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print all warning messages to the console</span>
+<span class="k">async</span> <span class="k">with</span> <span class="n">api</span><span class="o">.</span><span class="n">monitor</span><span class="p">(</span><span class="s2">&quot;warning&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">m</span><span class="p">:</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;warning: </span><span class="si">{</span><span class="n">msg</span><span class="o">.</span><span class="n">info</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is a higher-level method than <a class="reference internal" href="#agility.jsonapi.JsonApi.handle" title="agility.jsonapi.JsonApi.handle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">handle()</span></code></a> for reading arbitrary
+messages sent by the robot. It should be used whenever an async
+iterator in a task is a more convenient abstraction than a callback
+function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> – The message key to match, generally ‘all’, ‘default’, or a
+message type. See <a class="reference internal" href="#agility.jsonapi.JsonApi.handle" title="agility.jsonapi.JsonApi.handle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">handle()</span></code></a> for details about what keys
+are accepted.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <a class="reference internal" href="#agility.monitors.MessageMonitor" title="agility.monitors.MessageMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessageMonitor</span></code></a> object that returns messages matching
+the key as an async iterator.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.query">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#agility.jsonapi.JsonApi.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends one or more queries and waits for the response.</p>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get a response from a single query</span>
+<span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;get-robot-info&quot;</span><span class="p">)</span>
+
+<span class="c1"># Get responses for a group of simultaneous queries</span>
+<span class="c1"># The list can mix and match different ways of specifying messages</span>
+<span class="n">responses</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">query</span><span class="p">([</span>
+    <span class="s2">&quot;get-timestamp&quot;</span><span class="p">,</span>
+    <span class="p">[</span><span class="s2">&quot;get-object&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;object&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;object-id&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}}],</span>
+    <span class="n">msgs</span><span class="o">.</span><span class="n">GetObjectKinematics</span><span class="p">(</span><span class="nb">object</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;object-id&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}),</span>
+<span class="p">])</span>
+</pre></div>
+</div>
+<p>This can be used both for world-state queries that are allowed in a
+query-group message as well as for other query-like messages that are
+not allowed in a query group (e.g. get-action). However, when using a
+message type that isn’t allowed in a query group, it must not be
+grouped with any other messages and the period cannot be set.</p>
+<p>When a single query returns an error message, this method raises a
+<a class="reference internal" href="#agility.exceptions.JsonApiError" title="agility.exceptions.JsonApiError"><code class="xref py py-class docutils literal notranslate"><span class="pre">JsonApiError</span></code></a> instead of returning the error message as a
+response. When one query in a group returns an error message, the error
+message is included in the list of responses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>messages</strong> – A message or list of messages to send as queries.
+If a list is provided, they will be combined into a single
+query-group message.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns either a single message as a response to a single query or
+a list of messages as a response to multiple queries.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.periodic_query">
+<span class="sig-name descname"><span class="pre">periodic_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#agility.monitors.PeriodicQueryMonitor" title="agility.monitors.PeriodicQueryMonitor"><span class="pre">agility.monitors.PeriodicQueryMonitor</span></a><a class="headerlink" href="#agility.jsonapi.JsonApi.periodic_query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends one or more queries as a periodic query-group.</p>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get a response from a single query</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">msgs</span><span class="o">.</span><span class="n">GetGpsCoordinates</span><span class="p">(</span>
+    <span class="nb">object</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;robot-frame&quot;</span><span class="p">:</span> <span class="n">msgs</span><span class="o">.</span><span class="n">RobotFrame</span><span class="o">.</span><span class="n">BASE</span><span class="p">})</span>
+<span class="k">async</span> <span class="k">with</span> <span class="n">api</span><span class="o">.</span><span class="n">periodic_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span> <span class="k">as</span> <span class="n">q</span><span class="p">:</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">q</span><span class="p">:</span>
+        <span class="c1"># get-gps-coordinates will return an error until the robot</span>
+        <span class="c1"># has moved around enough to localize</span>
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">type</span> <span class="o">!=</span> <span class="s2">&quot;error&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;lat: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">latitude</span><span class="si">}</span><span class="s2">, &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;lon: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">longitude</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Get responses for a group of simultaneous queries</span>
+<span class="c1"># The list can mix and match different ways of specifying messages</span>
+<span class="n">queries</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;get-timestamp&quot;</span><span class="p">,</span>
+           <span class="p">[</span><span class="s2">&quot;get-object&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;object&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;object-id&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}}],</span>
+           <span class="n">msgs</span><span class="o">.</span><span class="n">GetObjectKinematics</span><span class="p">(</span><span class="nb">object</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;object-id&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">})]</span>
+<span class="k">async</span> <span class="k">with</span> <span class="n">api</span><span class="o">.</span><span class="n">periodic_query</span><span class="p">(</span><span class="n">queries</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span> <span class="k">as</span> <span class="n">q</span><span class="p">:</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">results</span> <span class="ow">in</span> <span class="n">q</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;time: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">run_time</span><span class="si">}</span><span class="s2">, &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;name: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;pose: </span><span class="si">{</span><span class="n">results</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">rpyxyz</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This can only be used with world-state queries that are allowed in a
+query-group message. This excludes several “get-” prefixed messages,
+such as “get-action-command”, as noted in the message documentation.</p>
+<p>This method will only raise a <a class="reference internal" href="#agility.exceptions.JsonApiError" title="agility.exceptions.JsonApiError"><code class="xref py py-class docutils literal notranslate"><span class="pre">JsonApiError</span></code></a> if the query or
+list of queries is malformed in some way. If an otherwise valid query
+returns an error message, e.g. because the selected object was not
+found, the error response is returned directly by the
+<a class="reference internal" href="#agility.monitors.PeriodicQueryMonitor" title="agility.monitors.PeriodicQueryMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">PeriodicQueryMonitor</span></code></a>. If a query is expected to potentially
+return an error in this way, the type of the response message should be
+checked.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>messages</strong> – A message or list of messages to send as a query-group.</p></li>
+<li><p><strong>period</strong> – The number of seconds between query responses.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns a <a class="reference internal" href="#agility.monitors.PeriodicQueryMonitor" title="agility.monitors.PeriodicQueryMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">PeriodicQueryMonitor</span></code></a> object that can be used to
+read responses from and cancel periodic queries.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.wait_action">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">wait_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">failure_timeout</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_after</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#agility.jsonapi.JsonApi.wait_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends an action and waits for it to succeed.</p>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Send a goto command and wait until successful, then remove the</span>
+<span class="c1"># command once the target is first reached</span>
+<span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">wait_action</span><span class="p">(</span><span class="n">msgs</span><span class="o">.</span><span class="n">ActionGoto</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;xy&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">]}))</span>
+
+<span class="c1"># Set a longer failure timeout than the default, so if the robot&#39;s</span>
+<span class="c1"># path is blocked for up to a minute it will continue to wait.</span>
+<span class="c1"># Also, keep the command in place when finished so the robot will</span>
+<span class="c1"># persistently try to stay at the target location if pushed away.</span>
+<span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">wait_action</span><span class="p">(</span><span class="n">msgs</span><span class="o">.</span><span class="n">ActionGoto</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;xy&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">]}),</span>
+                      <span class="n">failure_timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">remove_after</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If the action stays in a failure state continuously for longer than the
+failure timeout, raises an <a class="reference internal" href="#agility.exceptions.ActionFailed" title="agility.exceptions.ActionFailed"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionFailed</span></code></a> exception. If the
+action becomes inactive while waiting for it to reach success, raises
+an <a class="reference internal" href="#agility.exceptions.ActionCanceled" title="agility.exceptions.ActionCanceled"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionCanceled</span></code></a> exception. The latter condition can be the
+result of another client stealing the change-action-command privilege.</p>
+<p>Raises a <a class="reference internal" href="#agility.exceptions.JsonApiError" title="agility.exceptions.JsonApiError"><code class="xref py py-class docutils literal notranslate"><span class="pre">JsonApiError</span></code></a> exception if the sent action returns an
+error instead of being applied. Warnings about the action are ignored
+by this method and can be passed to a more general message handler
+instead.</p>
+<p>Note that the change-action-command privilege must be obtained before
+an action command can be sent. This is not done automatically by this
+method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> – An action message to send.</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>failure_timeout</strong> – The time in seconds that the action needs to stay
+in a failure state before this method will throw an
+ActionFailed exception. Defaults to 1 second, set to zero to
+fail immediately or infinity to ignore failure and continue
+waiting indefinitely until the action completes.</p></li>
+<li><p><strong>remove_after</strong> – If True (default), the action is removed using
+remove-action when the action succeeds or fails. If set to
+false, the action stays as the current command after
+wait_action completes.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns the status info string of the success message, which is
+often an empty string but in some cases contains useful
+information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.monitor_action">
+<span class="sig-name descname"><span class="pre">monitor_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_after</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#agility.monitors.ActionMonitor" title="agility.monitors.ActionMonitor"><span class="pre">agility.monitors.ActionMonitor</span></a><a class="headerlink" href="#agility.jsonapi.JsonApi.monitor_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends an action and returns an ActionMonitor object.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">with</span> <span class="n">api</span><span class="o">.</span><span class="n">monitor_action</span><span class="p">(</span><span class="s2">&quot;action-stand&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">m</span><span class="p">:</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">status</span><span class="p">,</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;status: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">, info: </span><span class="si">{</span><span class="n">info</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The returned <a class="reference internal" href="#agility.monitors.ActionMonitor" title="agility.monitors.ActionMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionMonitor</span></code></a> object can be used to monitor
+status messages sent regarding the action, and will automatically stop
+when the action becomes inactive. If the action message is replied to
+with an error message, the ActionMonitor throws a
+<a class="reference internal" href="#agility.exceptions.JsonApiError" title="agility.exceptions.JsonApiError"><code class="xref py py-class docutils literal notranslate"><span class="pre">JsonApiError</span></code></a>. Warnings about the action are ignored by the
+ActionMonitor and can be passed to a more general message handler
+instead.</p>
+<p>Note that the change-action-command privilege must be obtained before
+an action command can be sent. This is not done automatically by this
+method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> – An action message to send.</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>remove_after</strong> – If True (default), the action is removed using
+remove-action when the <a class="reference internal" href="#agility.monitors.ActionMonitor" title="agility.monitors.ActionMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionMonitor</span></code></a> object is
+canceled or leaves its <cite>async with</cite> context. If set to False,
+the action stays in place.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>An <a class="reference internal" href="#agility.monitors.ActionMonitor" title="agility.monitors.ActionMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionMonitor</span></code></a> object that can be used to track the
+status of the action (running, failure, success). The ActionMonitor
+will automatically stop iterating and clean up when the action
+becomes inactive, but does not do anything special if it reaches a
+failure status. Actions can go from failure back into running on
+their own if conditions allow.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.request_privilege">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">request_privilege</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">privilege</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#agility.jsonapi.JsonApi.request_privilege" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper for requesting a privilege.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">request_privilege</span><span class="p">(</span><span class="s2">&quot;change-action-command&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Requests a named privilege and raises a <a class="reference internal" href="#agility.exceptions.PrivilegeNotObtained" title="agility.exceptions.PrivilegeNotObtained"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrivilegeNotObtained</span></code></a>
+exception if it was not granted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>privilege</strong> – The privilege to request.</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>priority</strong> – The priority to request the privilege with (default 0).
+If another client already has the privilege at a higher
+priority, the request will fail and this method will raise a
+<a class="reference internal" href="#agility.exceptions.PrivilegeNotObtained" title="agility.exceptions.PrivilegeNotObtained"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrivilegeNotObtained</span></code></a> exception.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.handle">
+<span class="sig-name descname"><span class="pre">handle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="pre">Awaitable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#agility.jsonapi.JsonApi.handle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Installs a handler function for messages from the robot.</p>
+<p>This is a low-level method, <a class="reference internal" href="#agility.jsonapi.JsonApi.monitor" title="agility.jsonapi.JsonApi.monitor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">monitor()</span></code></a> should be used instead in
+most cases.</p>
+<p>The handler can either be a normal function or a coroutine (async def).
+The provided handler must take the <a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a> to handle as the
+only argument. It should return False or None if the message should be
+passed to handlers further down in the hierarchy or True if the message
+was completely handled and should not be processed further.</p>
+<p>Each handler has a particular key that identifies which messages it
+gets called for and when it gets called in the hierarchy. The key types
+and hierarchy of handlers is as follows:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>All: api.handle(‘all’, handler)</p></li>
+<li><p>Reference number: api.handle(123, handler)</p></li>
+<li><p>Message type: api.handle(‘message-type’, handler)</p></li>
+<li><p>Default: api.handle(‘default’, handler)</p></li>
+</ol>
+</div></blockquote>
+<p>Multiple handlers can be installed at once for a given key. In this
+case, all of the handlers for the same key are called for a given
+message, but the relative ordering is undefined. When any of multiple
+handlers for the same key returns True, the message is not passed to
+the next set of handlers in the hierarchy, but it is always passed to
+all of the handlers for the same key.</p>
+<p>Returns an integer that can be passed to <a class="reference internal" href="#agility.jsonapi.JsonApi.remove_handler" title="agility.jsonapi.JsonApi.remove_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">remove_handler()</span></code></a> to
+remove the installed handler.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – int for reference number handlers, the message type name for
+message type handlers, or the values ‘all’ or ‘default’</p></li>
+<li><p><strong>handler</strong> – Callable handler</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A handler number that can be used to remove the handler later. This
+will be unique for each call of handle even if the same handler
+function is installed multiple times.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.remove_handler">
+<span class="sig-name descname"><span class="pre">remove_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handler_num</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#agility.jsonapi.JsonApi.remove_handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes an installed message handler.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>handler_num</strong> – The integer returned by <a class="reference internal" href="#agility.jsonapi.JsonApi.handle" title="agility.jsonapi.JsonApi.handle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">handle()</span></code></a> for the handler
+to be removed. Raises an exception if this does not match an
+installed handler.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.get_response">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">get_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_warnings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><a class="headerlink" href="#agility.jsonapi.JsonApi.get_response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a message and returns a single response.</p>
+<p>This is a low-level method, <a class="reference internal" href="#agility.jsonapi.JsonApi.query" title="agility.jsonapi.JsonApi.query"><code class="xref py py-meth docutils literal notranslate"><span class="pre">query()</span></code></a> should be used instead in
+most cases.</p>
+<p>This method will return error messages directly instead of raising a
+<a class="reference internal" href="#agility.exceptions.JsonApiError" title="agility.exceptions.JsonApiError"><code class="xref py py-class docutils literal notranslate"><span class="pre">JsonApiError</span></code></a> exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – The message to send.</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>ignore_warnings</strong> – If True (default), warning messages received in
+response to the sent message are ignored and can be handled by
+a more general message handler (if any). Set to False to output
+warnings directly, but this is generally not desired because
+some queries that normally return a single response or error
+message can produce a warning in addition to these messages,
+causing the “main” response to be lost.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A <a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a> object representing the response to the sent
+message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.get_responses">
+<span class="sig-name descname"><span class="pre">get_responses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_warnings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#agility.monitors.ResponseMonitor" title="agility.monitors.ResponseMonitor"><span class="pre">agility.monitors.ResponseMonitor</span></a><a class="headerlink" href="#agility.jsonapi.JsonApi.get_responses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a message and allows waiting for multiple responses.</p>
+<p>This is a low-level method, <a class="reference internal" href="#agility.jsonapi.JsonApi.monitor" title="agility.jsonapi.JsonApi.monitor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">monitor()</span></code></a>, <a class="reference internal" href="#agility.jsonapi.JsonApi.periodic_query" title="agility.jsonapi.JsonApi.periodic_query"><code class="xref py py-meth docutils literal notranslate"><span class="pre">periodic_query()</span></code></a>, or
+<a class="reference internal" href="#agility.jsonapi.JsonApi.monitor_action" title="agility.jsonapi.JsonApi.monitor_action"><code class="xref py py-meth docutils literal notranslate"><span class="pre">monitor_action()</span></code></a> should be used instead in most cases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – The message to send. Note that the message is not actually
+sent until the returned <a class="reference internal" href="#agility.monitors.ResponseMonitor" title="agility.monitors.ResponseMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResponseMonitor</span></code></a> object is
+iterated upon with an <cite>async for</cite> loop.</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>ignore_warnings</strong> – If True (default), warning messages received in
+response to the sent message are ignored by the returned
+<a class="reference internal" href="#agility.monitors.ResponseMonitor" title="agility.monitors.ResponseMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResponseMonitor</span></code></a> and can be handled by a more general
+message handler (if any). Set to False to have the
+ResponseMonitor output warnings directly.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A <a class="reference internal" href="#agility.monitors.ResponseMonitor" title="agility.monitors.ResponseMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResponseMonitor</span></code></a> object that sends the message and
+returns responses as an async iterator.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.connect">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#agility.jsonapi.JsonApi.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects to the server. Not needed if using <cite>async with</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.jsonapi.JsonApi.close">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#agility.jsonapi.JsonApi.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes connection to server. Not needed if using <cite>async with</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-agility.monitors"></span><dl class="py class">
+<dt class="sig sig-object py" id="agility.monitors.MessageMonitor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">MessageMonitor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">JsonApi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#agility.monitors.MessageMonitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows monitoring selected messages using an async for loop.</p>
+<p>Returned by <a class="reference internal" href="#agility.jsonapi.JsonApi.monitor" title="agility.jsonapi.JsonApi.monitor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JsonApi.monitor()</span></code></a>. Alternative to <a class="reference internal" href="#agility.jsonapi.JsonApi.handle" title="agility.jsonapi.JsonApi.handle"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JsonApi.handle()</span></code></a>
+used when a coroutine with an async for loop is more convenient than a
+handler function that gets called on each message matching the key.
+Internally uses JsonApi.handle and automatically deals with removing the
+handler when finished.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Monitor all &#39;error&#39; messages sent by the robot</span>
+<span class="k">async</span> <span class="k">with</span> <span class="n">api</span><span class="o">.</span><span class="n">monitor</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">m</span><span class="p">:</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">info</span><span class="p">)</span>
+        <span class="c1"># Break to stop monitoring</span>
+</pre></div>
+</div>
+<p>It is also possible to manually call the <a class="reference internal" href="#agility.monitors.MessageMonitor.cancel" title="agility.monitors.MessageMonitor.cancel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cancel()</span></code></a> method instead of
+using an <cite>async with</cite> block, but in this case it is important to make sure
+that cancel does eventually get called when responses are no longer needed.
+Failure to do so will leave an unused coroutine and message handler
+installed, and if many of these accumulate over the program lifetime it
+could cause performance issues.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.monitors.MessageMonitor.cancel">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">cancel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#agility.monitors.MessageMonitor.cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops monitoring for messages.</p>
+<p>This terminates the <cite>async for</cite> iteration, and can be called from
+outside the task with the loop. Returns False if already canceled. Not
+necessary if using <cite>async with</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agility.monitors.ResponseMonitor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">ResponseMonitor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">JsonApi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_warnings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#agility.monitors.ResponseMonitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows reading multiple responses to a sent message.</p>
+<p>This object is returned by <a class="reference internal" href="#agility.jsonapi.JsonApi.get_responses" title="agility.jsonapi.JsonApi.get_responses"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JsonApi.get_responses()</span></code></a> and serves as an
+async iterator returning each message sent by the server in response to a
+sent message. Usage is similar to <a class="reference internal" href="#agility.monitors.MessageMonitor" title="agility.monitors.MessageMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessageMonitor</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agility.monitors.PeriodicQueryMonitor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">PeriodicQueryMonitor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">JsonApi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bare_query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#agility.monitors.PeriodicQueryMonitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Periodic query management object.</p>
+<p>This object is returned by <a class="reference internal" href="#agility.jsonapi.JsonApi.query" title="agility.jsonapi.JsonApi.query"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JsonApi.query()</span></code></a> and serves as an async
+iterator returning the responses to a periodic query. Usage is similar to
+<a class="reference internal" href="#agility.monitors.MessageMonitor" title="agility.monitors.MessageMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessageMonitor</span></code></a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.monitors.PeriodicQueryMonitor.cancel">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">cancel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#agility.monitors.PeriodicQueryMonitor.cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops monitoring for messages.</p>
+<p>This terminates the <cite>async for</cite> iteration, and can be called from
+outside the task with the loop. Returns False if already canceled. Not
+necessary if using <cite>async with</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agility.monitors.ActionMonitor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">ActionMonitor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">JsonApi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_after</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#agility.monitors.ActionMonitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action status monitoring object.</p>
+<p>This object is returned by <a class="reference internal" href="#agility.jsonapi.JsonApi.monitor_action" title="agility.jsonapi.JsonApi.monitor_action"><code class="xref py py-meth docutils literal notranslate"><span class="pre">JsonApi.monitor_action()</span></code></a> and serves as an
+async iterator returning the action status and info each time it changes.
+Can also be used to cancel the action that it is monitoring. Usage is
+similar to <a class="reference internal" href="#agility.monitors.MessageMonitor" title="agility.monitors.MessageMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessageMonitor</span></code></a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.monitors.ActionMonitor.cancel">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">cancel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#agility.monitors.ActionMonitor.cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops monitoring for messages.</p>
+<p>This terminates the <cite>async for</cite> iteration, and can be called from
+outside the task with the loop. Returns False if already canceled. Not
+necessary if using <cite>async with</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-agility.simulator">
+<span id="launching-simulator-instances"></span><h2>Launching simulator instances<a class="headerlink" href="#module-agility.simulator" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="agility.simulator.Simulator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Simulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulator_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#agility.simulator.Simulator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Launches a simulator instance.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">agility</span>
+<span class="kn">import</span> <span class="nn">agility.messages</span> <span class="k">as</span> <span class="nn">msgs</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Connect to simulator on port 8080</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">agility</span><span class="o">.</span><span class="n">JsonApi</span><span class="p">()</span> <span class="k">as</span> <span class="n">api</span><span class="p">:</span>
+        <span class="c1"># Send messages, launch other tasks</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">msgs</span><span class="o">.</span><span class="n">GetRobotInfo</span><span class="p">())</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Robot name: </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">robot_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="c1"># When the &#39;async with&#39; block exits, the connection shuts down</span>
+
+<span class="c1"># Launch simulator on port 8080</span>
+<span class="k">with</span> <span class="n">agility</span><span class="o">.</span><span class="n">Simulator</span><span class="p">(</span><span class="s2">&quot;/path/to/ar-control&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">sim</span><span class="p">:</span>
+    <span class="c1"># asyncio.run(main()) # Python 3.7+ only</span>
+    <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">main</span><span class="p">())</span> <span class="c1"># Python 3.6</span>
+<span class="c1"># When the &#39;with&#39; block exits, the simulator shuts down</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>simulator_path</strong> – The relative or absolute path to the simulator binary.</p></li>
+<li><p><strong>*args</strong> – All additional arguments should be strings that will be passed
+to the simulator as if they were command line arguments. These
+can be paths to TOML files, configuration mode names, or
+explicit TOML data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p><strong>auto_port</strong> – Defaults to False, if True then the simulator is instructed
+to automatically select a port that doesn’t conflict with other
+running simulators. The selected port is available in the port
+property of the returned simulator object. This option only works
+with versions of ar-control that support automatic port selection.</p>
+</dd>
+</dl>
+<p>The returned simulator object can be used as a context manager to
+automatically close the simulator when finished:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">agility</span><span class="o">.</span><span class="n">Simulator</span><span class="p">(</span><span class="s1">&#39;/path/to/ar-control&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">sim</span><span class="p">:</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">agility</span><span class="o">.</span><span class="n">JsonApi</span><span class="p">()</span> <span class="k">as</span> <span class="n">api</span><span class="p">:</span>
+        <span class="c1"># Do things with API...</span>
+</pre></div>
+</div>
+<p>Alternatively, <a class="reference internal" href="#agility.simulator.Simulator.close" title="agility.simulator.Simulator.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> can be called to shut down the simulator when
+finished. When the simulator shuts down using either method, it checks to
+see if the simulator has already unexpectedly terminated and raises a
+<a class="reference internal" href="#agility.exceptions.SimulatorTerminated" title="agility.exceptions.SimulatorTerminated"><code class="xref py py-class docutils literal notranslate"><span class="pre">SimulatorTerminated</span></code></a> exception if so. This check can also be run
+at any other time while the simulator is running by calling <a class="reference internal" href="#agility.simulator.Simulator.check" title="agility.simulator.Simulator.check"><code class="xref py py-meth docutils literal notranslate"><span class="pre">check()</span></code></a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.simulator.Simulator.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#agility.simulator.Simulator.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raises an exception if the simulator has unexpectedly shut down.</p>
+<p>Does nothing if the simulator is running or was shut down by calling
+<a class="reference internal" href="#agility.simulator.Simulator.close" title="agility.simulator.Simulator.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> or exiting a ‘with’ block. If the simulator is otherwise
+not running, raises a <a class="reference internal" href="#agility.exceptions.SimulatorTerminated" title="agility.exceptions.SimulatorTerminated"><code class="xref py py-class docutils literal notranslate"><span class="pre">SimulatorTerminated</span></code></a> exception with
+information about why the simulator terminated extracted from
+<a class="reference internal" href="#agility.simulator.Simulator.stdout" title="agility.simulator.Simulator.stdout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stdout</span></code></a> and <a class="reference internal" href="#agility.simulator.Simulator.stderr" title="agility.simulator.Simulator.stderr"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agility.simulator.Simulator.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#agility.simulator.Simulator.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shuts down the simulator.</p>
+<p>Does not need to be called directly if a ‘with’ block is used. Raises a
+<a class="reference internal" href="#agility.exceptions.SimulatorTerminated" title="agility.exceptions.SimulatorTerminated"><code class="xref py py-class docutils literal notranslate"><span class="pre">SimulatorTerminated</span></code></a> exception if the simulator already shut
+down unexpectedly.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="agility.simulator.Simulator.port">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">port</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#agility.simulator.Simulator.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port chosen by the simulator in automatic port selection mode.</p>
+<p>Returns None if automatic port selection was not enabled.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="agility.simulator.Simulator.stdout">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">stdout</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#agility.simulator.Simulator.stdout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all of the text printed to stdout since the start.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="agility.simulator.Simulator.stderr">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">stderr</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#agility.simulator.Simulator.stderr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all of the text printed to stderr since the start.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-agility.exceptions">
+<span id="exception-types"></span><h2>Exception types<a class="headerlink" href="#module-agility.exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="agility.exceptions.JsonApiError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">JsonApiError</span></span><a class="headerlink" href="#agility.exceptions.JsonApiError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised when an error is received in response to a sent message.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="agility.exceptions.ActionFailed">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">ActionFailed</span></span><a class="headerlink" href="#agility.exceptions.ActionFailed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised when an action fails.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="agility.exceptions.ActionCanceled">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">ActionCanceled</span></span><a class="headerlink" href="#agility.exceptions.ActionCanceled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised when an action stops running unexpectedly.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="agility.exceptions.PrivilegeNotObtained">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">PrivilegeNotObtained</span></span><a class="headerlink" href="#agility.exceptions.PrivilegeNotObtained" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised when a requested privilege is not given to the client.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="agility.exceptions.ConnectionClosedError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">ConnectionClosedError</span></span><a class="headerlink" href="#agility.exceptions.ConnectionClosedError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised when trying to send a message with a closed JsonApi object.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="agility.exceptions.SimulatorTerminated">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">SimulatorTerminated</span></span><a class="headerlink" href="#agility.exceptions.SimulatorTerminated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised when a simulator instance terminates unexpectedly.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-agility.messages.messages">
+<span id="message-helper-types"></span><h2>Message helper types<a class="headerlink" href="#module-agility.messages.messages" title="Permalink to this headline">¶</a></h2>
+<p>The agility.messages module contains the Message class used to represent
+messages received from the robot, as well as a collection of message creation
+helpers.</p>
+<p>When using the message creation helpers, we recommend using a shortened import
+alias for them:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">agility.messages</span> <span class="k">as</span> <span class="nn">msgs</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="n">msgs</span><span class="o">.</span><span class="n">ActionGoto</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">msgs</span><span class="o">.</span><span class="n">Pose</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>The message creation helpers are not needed to send messages using
+<a class="reference internal" href="#agility.jsonapi.JsonApi" title="agility.jsonapi.JsonApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">JsonApi</span></code></a>. All methods accept equivalent JSON-like objects as well, and
+if no fields need to be specified, they will also accept just the message type
+as a string:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># All of the following are equivalent</span>
+<span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msgs</span><span class="o">.</span><span class="n">ActionStand</span><span class="p">())</span>
+<span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">send</span><span class="p">([</span><span class="s2">&quot;action-stand&quot;</span><span class="p">,</span> <span class="p">{}])</span>
+<span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;action-stand&quot;</span><span class="p">)</span>
+
+<span class="c1"># Equivalent ways of specifying a message with explicit field values</span>
+<span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msgs</span><span class="o">.</span><span class="n">ActionStand</span><span class="p">(</span><span class="n">base_pose</span><span class="o">=</span><span class="n">msgs</span><span class="o">.</span><span class="n">Pose</span><span class="p">(</span><span class="n">xyz</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])))</span>
+<span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">send</span><span class="p">([</span><span class="s2">&quot;action-stand&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;base-pose&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;xyz&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]}}])</span>
+<span class="k">await</span> <span class="n">api</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msgs</span><span class="o">.</span><span class="n">ActionStand</span><span class="p">(</span><span class="n">base_pose</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;xyz&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]}))</span>
+</pre></div>
+</div>
+<p>If your code editor supports autocompletion and it is correctly configured, the
+message creation helpers can help write code more quickly. For example, typing
+“msgs.Action” should bring up a tab-complete list of action messages, and when
+a specific action is selected your editor may also list the message fields
+available as keyword arguments.</p>
+<p>When using an older version of this library with a newer version of the
+simulator, any newly added message types will not have corresponding message
+creation helpers. In this case, you can always just specify the message in
+JSON-like format.</p>
+<p>The message creation helpers themselves are not listed in this documentation.
+Instead, consult the main JSON API documentation for descriptions of each
+message. The message helpers and their fields are named after the JSON messages
+as listed in the main API documentation, but message names are converted to
+CamelCase and fields are converted to use underscores_as_separators instead of
+dashes, in accordance with Python’s syntax and standard style. Structs and
+enums also have helpers in the agility.messages module.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="agility.messages.messages.Struct">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Struct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#agility.messages.messages.Struct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for JSON structs.</p>
+<p>Permits accessing fields as attributes instead of just as dictionary
+keys. Structs in incoming messages will be converted to this type, but
+outgoing messages can either be a Struct or an equivalent dict.</p>
+<p>This class can be instantiated directly, but it is generally better to use
+the type-specific subclasses, which verify the keyword arguments passed to
+the function.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="agility.messages.messages.Message">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#agility.messages.messages.Message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for JSON messages.</p>
+<p>Permits accessing fields as attributes instead of just as dictionary
+keys. Incoming messages will be converted to this type using the
+<a class="reference internal" href="#agility.messages.messages.from_json" title="agility.messages.messages.from_json"><code class="xref py py-func docutils literal notranslate"><span class="pre">from_json()</span></code></a> function, and these messages can be converted to JSON
+using the to_json method.</p>
+<p>This class can be instantiated directly, but it is generally better to use
+the type-specific helper functions, which verify the keyword arguments
+passed to the function.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="agility.messages.messages.from_json">
+<span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><span class="pre">agility.messages.messages.Message</span></a><a class="headerlink" href="#agility.messages.messages.from_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a JSON message string into a <a class="reference internal" href="#agility.messages.messages.Message" title="agility.messages.messages.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></a> object.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="changelog">
+<h2>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>0.1.1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fixed bug that caused lower-priority handlers to get called when an incoming message should have been fully handled by a higher-priority handler.</p></li>
+<li><p>Added workaround for a bug in the websockets library that can raise a spurious exception while shutting down the connection.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h3>0.1.0<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>First beta release.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Agility Robotics.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

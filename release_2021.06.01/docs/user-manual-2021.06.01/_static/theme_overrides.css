@@ -1,0 +1,50 @@
+/* Make tables wrap instead of scroll */
+.wy-table-responsive table td, .wy-table-responsive table th {
+   white-space: normal;
+}
+
+/* Override admonition colors (https://mdbootstrap.com/docs/jquery/css/colors/)
+   Title: *-lighten-2
+   Background: *-lighten-5 */
+/* Red */
+.rst-content .danger {
+   background: #ffebee;
+}
+.rst-content .danger .admonition-title {
+   background: #e57373;
+}
+/* Orange */
+.rst-content .warning {
+   background: #fff3e0;
+}
+.rst-content .warning .admonition-title {
+   background: #ffb74d;
+}
+/* Amber */
+.rst-content .caution {
+   background: #fff8e1;
+}
+.rst-content .caution .admonition-title {
+   background: #ffd54f;
+}
+/* Purple */
+.rst-content .important {
+   background: #f3e5f5;
+}
+.rst-content .important .admonition-title {
+   background: #ba68c8;
+}
+/* Blue */
+.rst-content .note {
+   background: #e3f2fd;
+}
+.rst-content .note .admonition-title {
+   background: #64b5f6;
+}
+/* Green */
+.rst-content .tip {
+   background: #e8f5e9;
+}
+.rst-content .tip .admonition-title {
+   background: #81c784;
+}

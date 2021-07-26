@@ -1,0 +1,18 @@
+<launch>
+    <arg name="mx" default="0" />
+    <arg name="my" default="0" />
+    <arg name="mz" default="0" />
+    <arg name="fx" default="0" />
+    <arg name="fy" default="0" />
+    <arg name="fz" default="0" />
+    <arg name="duration" default="0.1" />
+    <node name="apply_force_node" pkg="digit_jsonapi" type="apply_force.py" output="screen">
+        <param name="mx" value="$(arg mx)" />
+        <param name="my" value="$(arg my)" />
+        <param name="mz" value="$(arg mz)" />
+        <param name="fx" value="$(arg fx)" />
+        <param name="fy" value="$(arg fy)" />
+        <param name="fz" value="$(arg fz)" />
+        <param name="duration" value="$(arg duration)"/>
+    </node>
+</launch>

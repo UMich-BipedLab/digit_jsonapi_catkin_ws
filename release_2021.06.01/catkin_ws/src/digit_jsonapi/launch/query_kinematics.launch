@@ -1,0 +1,5 @@
+<launch>
+    <node name="query_kinematics_node" pkg="digit_jsonapi" type="query_kinematics.py" output="screen">
+        <param name="exp_mode" value="$(arg exp_mode)" />
+    </node>
+</launch>

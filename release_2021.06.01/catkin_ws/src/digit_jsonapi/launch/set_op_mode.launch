@@ -1,0 +1,6 @@
+<launch>
+    <node name="set_op_mode_node" pkg="digit_jsonapi" type="set_op_mode.py" output="screen">
+        <param name="exp_mode" value="$(arg exp_mode)" />
+        <param name="op_mode" value="$(arg op_mode)" />
+    </node>
+</launch>

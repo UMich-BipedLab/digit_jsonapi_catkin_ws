@@ -1,0 +1,11 @@
+#!/home/grantgib/workspace/research/digit_jsonapi-package/release_2021.06.01/catkin_ws/.virtualenvs/digit-venv/bin/python3
+
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from catkin_pkg.cli.tag_changelog import main
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
