@@ -1,4 +1,4 @@
-# digit_jsonapi-package
+# digit-jsonapi package
 ROS package for using Digit JSON API with AR's PySDK
 
 # Prerequisites
